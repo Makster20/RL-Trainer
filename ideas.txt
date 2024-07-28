@@ -1,0 +1,185 @@
+Theme will be Blue and Aqua
+
+Prompt user for input from ballchasing.com (also provide link to video of how to upload replay to ballchasing)
+ask for other stuff like rank and div and other stuff(if i think)
+and then output their playstyle, and what mechanics they need to learn
+
+Note: ONLY 2V2 RANKED
+
+also add log-in functionality
+
+navbar will have:
+home page: main function to prompt user to do again
+playstyle page: show what playstyle the user has and needs to learn what mechanics
+Log out/log in  button
+also logo will be link to home page
+
+
+
+How website will work:
+first welcome user
+then ask user to register
+then ask user to login
+then ask user to input the fields
+then output the information
+and have a link to do again
+----------------FINISH---------------
+
+PLAYSTYLES:
+Ball Chaser
+Anchor
+Passer
+All-Rounder
+
+SKILLS: (Make sure to include videos also)
+-------------
+BALL CHASER:
+Speedflip Kickoff
+Powerslide
+50/50's
+Push-Dribbling
+Shot Accuracy
+Powershot
+Air-Roll Shots
+Fast Aerials
+Wave-Dashing
+Chain-Dashing
+Wall-Dashing
+Catching
+Wall Shots
+Half-Flipping
+Power-slide Cuts
+Recoveries
+Boost Management
+Dribbling
+For a Ball Chaser, knowing how to do freestyle mechanics are very useful:
+Flicking
+Wall Stops
+Ground Dribble to Air Dribble
+Double Taps
+Ceiling Shots
+Flip Resets
+
+--------------
+ANCHOR:
+Speedflip Kickoff
+Powerslide
+Demos
+Push-Dribbling
+50/50's
+Shot Accuracy
+Catching
+Half-Flipping
+Hook-Shots
+Powerslide-Cuts
+Wave-Dashing
+Opponent Awareness
+Shadow Defence
+Bounce-Dribbling
+Faking
+Dribbling
+Boost Stealing
+Backboard Clearing
+
+--------------
+PASSER:
+Speedflip Kickoff
+Shot Accuracy
+Push-Dribbling
+Half-Flipping
+Hook-Shots
+Air-Roll Shots
+Pinching
+Backboard Clearing
+50/50's
+Fast Aerials
+Wall Shots
+Wave-Dashing
+Powershot
+Pre-Jumping
+Powerslide
+Recoveries
+Opponent Awareness
+Redirects
+Teammate Awareness
+Shadow Defence
+
+--------------
+ALL-ROUNDER:
+Speedflip Kickoff
+Powerslide
+Shot Accuracy
+50/50's
+Fast Aerials
+Half-Flipping
+Wave-Dashing
+Powershot
+Hook-Shots
+Powerslide-Cuts
+Recoveries
+Shadow Defence
+Boost Management
+Teammate Awareness
+Passing
+Dribbling
+Air Dribbling
+Learn any of these advanced mechanics:
+Flicking
+Flip Resets
+Redirects
+Double Taps
+
+-------------------------------------------------------------
+        db.execute('INSERT INTO playstyle (playstyle, user_id) VALUES (?, ?)', playstyle, session['user_id'])
+
+
+
+
+
+
+
+
+
+
+        ----------------------------------------------------------------------
+
+playsytle stats:
+
+ANCHOR GAMES:
+avgspeed: 130, balltocuhes: 310, bpm: 240, boosteficeincy: 212, timeSS: 18 ,percent in offhalf: 34, percentin def half: 65, percent in mid: 36, assist: 0, sves: 0, gols: 1 shots: 1
+avgspeed: 129, balltocuhes: 250, bpm: 278, boosteficeincy: 209, timeSS: 20,percent in offhalf: 22, percentin def half: 77, percent in mid: 21, assist: 0, sves: 4, gols: 3 shots: 4
+avgspeed: 130, balltocuhes: 276, bpm: 334, boosteficeincy: 311, timeSS: 22,percent in offhalf: 29, percentin def half: 70, percent in mid: 30, assist: 0, sves: 2, gols: 1 shots: 3
+
+HOW TO INDENTIFY:
+avgspeed < 135
+bpm < 310
+timeSS < 25
+percentin def half > 62
+
+BALLCHASER GAMES:
+avgspeed: 153, balltocuhes: 252, bpm: 422, boosteficeincy(higher means worse): 416, timeSS: 54, percent in offhalf: 32, percentin def half: 67, percent in mid: 32, assist: 0, sves: 0, gols: 0 shots: 1
+avgspeed: 148, balltocuhes: 231, bpm: 451, boosteficeincy(higher means worse): 433, timeSS: 75, percent in offhalf: 47, percentin def half: 52, percent in mid: 32, assist: 2, sves: 1, gols: 1 shots: 3
+avgspeed: 155, balltocuhes: 280, bpm: 460, boosteficeincy(higher means worse): 490, timeSS: 65, percent in offhalf: 40, percentin def half: 59, percent in mid: 30, assist: 2, sves: 1, gols: 1 shots: 1
+
+HOW TO INDENTIFY PLAYSTYLE: 
+avgspeed > 145
+bpm > 400
+timeSS > 52
+
+ALLROUNDER GAMES:
+avgspeed: 143, balltocuhes: 257, bpm: 388, boosteficeincy: 374, timeSS: , percent in offhalf: 37, percentin def half: 62, percent in mid: 32, assist: 0, sves: 1, gols: 1 shots: 2
+avgspeed: 140, balltocuhes: 259, bpm: 363, boosteficeincy: 331, timeSS: , percent in offhalf: 31, percentin def half: 68, percent in mid: 31, assist: 0, sves: 1, gols: 0 shots: 0
+
+HOW TO INDENTIFY PLAYSTYLE:
+if any of the playstyles dont match the others than the player is this
+
+PASSER GAMES:
+avgspeed: 129, balltocuhes: 188, bpm: 351, boosteficeincy: 299, timeSS: 22, percent in offhalf: 42, percentin def half: 57, percent in mid: 27, assist: 0, sves: 1, gols: 4 shots: 5
+avgspeed: 136, balltocuhes: 251, bpm: 355, boosteficeincy: 309, timeSS: 34, percent in offhalf: 34, percentin def half: 65, percent in mid: 25, assist: 1, sves: 0, gols: 1 shots: 1
+avgspeed: 132, balltocuhes: 282, bpm: 330, boosteficeincy: 300, timeSS: 19, percent in offhalf: 40, percentin def half: 59, percent in mid: 33, assist: 1, sves: 0, gols: 1 shots: 5
+
+HOW TO INDENTIFY PLAYSTYLE:
+percent in mid > 31
+(not htere but will add)
+distance to mates > 290
+

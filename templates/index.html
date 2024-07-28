@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block main %}
+    <div class="container-lg fade-in">
+        <div class="py-2 pb-5">
+            <h1 class="display-3">Upload your replay to find your <b>Playstyle</b></h1>
+        </div>
+        <div class="py-2">
+            <form action="/" method="post" enctype="multipart/form-data">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                        <div class="mb-3">
+                          <input type="file" class="form-control border-warning" name="replay" accept=".replay">
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-secondary border-warning">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row justify-content-center">
+            <div id='alert' class="bg-danger col-5 py-4 rounded" role="alert">
+                Note: This website is optimized only for soccar <br>(2v2 recommended and 1v1 not supported)<br>
+                And using this again will override the last result
+            </div>
+        </div>
+        
+        <div class="py-4">
+            <p class="d-inline-flex gap-1">
+                <button class="btn btn-secondary border-warning" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Not sure how?
+                </button>
+            </p>
+            <div class="collapse" id="collapseExample">
+                <div class="card card-body bg-secondary">
+                    1. After you have finished a game in Rocket League, click the 'Save Replay' button in the bottom-left corner.<br><br>
+                    2. Locate to User\Documents\My Games\Rocket League\TAGame\DemosEpic and select the replay file you just saved. <br><br>
+                    And you are done!                                     
+                </div>
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}

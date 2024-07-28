@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block main %}
+
+    <form action="/register" method="post" class="fade-in">
+        <div>
+            <div class="mb-3">
+                <input autofocus class="form-control mx-auto w-auto border-warning" name="username" placeholder="Username" type="text">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto border-warning" name="password" placeholder="Password" type="password">
+            </div>
+            <div class="mb-3">
+                <input class="form-control mx-auto w-auto border-warning" name="conpassword" placeholder="Confirm Password" type="password">
+            </div>
+            <button class="btn btn-secondary border-warning" type="submit">Register</button>
+        </div>
+    </form>
+    <div class="my-5" style="height: 200px;"></div>
+{% endblock %}

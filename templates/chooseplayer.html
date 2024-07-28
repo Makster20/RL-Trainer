@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block main %}
+<form action="/playstyle" method="post">
+    <div class="container-lg fade-in">
+        <div class="row">
+            <div class="bg-blueteam rounded col-lg-5">
+                {% for player in blueplayers %}
+                    <div class="row py-4">
+                        <button type="submit" name="selectedPlayer" value="blue-{{ loop.index0 }}" class="btn btn-link text-decoration-none">
+                            <h1 class="h1  text-light">{{ player['name'] }}</h1>
+                        </button>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="bg-primary col-lg-2">
+
+            </div>
+            <div class="bg-orangeteam rounded col-lg-5">
+                {% for player in orangeplayers %}
+                <div class="row py-4">
+                    <button type="submit" name="selectedPlayer" value="orange-{{ loop.index0 }}" class="btn btn-link text-decoration-none">
+                        <h1 class="h1  text-light">{{ player['name'] }}</h1>
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</form>
+<div class="my-5" style="height: 200px;"></div>
+
+{% endblock %}

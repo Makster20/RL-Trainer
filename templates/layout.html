@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/main.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="/static/logo.png">
+    <title>RL Trainer</title>
+    <style>
+      .fade-in {
+          opacity: 0;
+          transition: opacity 1s ease-in;
+      }
+      .loaded .fade-in {
+          opacity: 1;
+      }
+      #alert {
+        transition: opacity 2s;
+      }
+  </style>
+</head>
+<body class="bg-primary text-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-secondary border-bottom border-warning border-5">
+        <div class="container-fluid px-5 py-2">
+          <a class="navbar-brand text-light fw-bold fs-2" href="/">RL Trainer</a>
+          <button class="navbar-toggler bg-warning" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            {% if session["user_id"] %}
+                        <ul class="navbar-nav ms-auto mt-2">
+                            <li class="nav-item"><a class="nav-link text-light" href="/">Home</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="/myplaystyle">My Playstyle</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="/logout">Log Out</a></li>
+                        </ul>
+                    {% else %}
+                        <ul class="navbar-nav ms-auto mt-2">
+                            <li class="nav-item"><a class="nav-link text-light" href="/register">Register</a></li>
+                            <li class="nav-item"><a class="nav-link text-light" href="/login">Log In</a></li>
+                        </ul>
+                    {% endif %}
+          </div>
+        </div>
+    </nav>
+
+    <main class="container py-5 text-center">
+      {% block main %}
+      
+      {% endblock %}
+    </main>
+    
+    <footer class="footer mt-auto py-4 bg-secondary border-top border-warning border-5">
+        <div class="container row text-light text-center">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-5 text-center">
+                <br><p class="fs-3">Made by <a href="https://www.youtube.com/channel/UCbu0J1jTIX3LB6SfQ4lOJ5w" target="_blank" class="text-decoration-none text-light fw-bold">Makster20</a></p>
+            </div>
+            <div class="col-lg-3">
+                <p class="fs-5 text-center">Credit to <a href="https://github.com/tanrbobanr" target="_blank"class="text-light">tanrbobanr</a> for the Pychasing Library</p>
+                <p class="fs-5 text-center">Credit to <a href="https://www.miraclewhiff.com/" target="_blank" class="text-light">MiracleWhiff</a> for the tutorials on mechanics</p>
+            </div>
+            
+            <div class="col-lg-3">
+                <p class="fs-5 text-center">Credit to <a href="https://www.youtube.com/channel/UCP9dqlEktObJ-ji-JOdGQhQ" target="_blank" class="text-light">Flakes</a>, <a href="https://www.youtube.com/c/HKBoba" target="_blank" class="text-light">HK Boba</a>, <a href="https://www.youtube.com/@SpookLuke" target="_blank" class="text-light">SpookLuke</a>, <a href="https://www.youtube.com/channel/UCd1A9A5JGDtLxCrc59yHncg" target="_blank" class="text-light">Thanovic</a> and <a href="https://www.youtube.com/c/FLuuMP" target="_blank" class="text-light">FluuMP</a> on YouTube</p>
+            </div>
+        </div>
+    </footer>
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+    crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to fade out the element
+        function fadeOutElement() {
+            document.getElementById('alert').style.opacity = '0';
+        }
+
+        // Set a timer to fade out the element after 5 seconds (5000 milliseconds)
+        setTimeout(fadeOutElement, 5000);
+
+        $(document).ready(function() {
+            // Add a class to the body after a delay to trigger the fade-in animation
+            setTimeout(function() {
+                $('body').addClass('loaded');
+            }, 100); // Adjust the delay as needed
+        });
+
+        setTimeout(fade_out, 5000);
+
+        function fade_out() {
+            $("#warning").fadeOut(1000, function() {
+                $(this).empty();
+            });
+        }
+    </script>
+</body>
+</html>
